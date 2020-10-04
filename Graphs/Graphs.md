@@ -1,7 +1,7 @@
 
-> Graphs
+# Graphs
 
-## Youtube Channel
+## Youtube Videos / Channel
 * [Introduction to graphs](https://www.youtube.com/watch?v=gXgEDyodOJU)
 
 
