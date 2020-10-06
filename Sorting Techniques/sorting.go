@@ -12,7 +12,7 @@ func BubbleSort(arr []int) {
 			}
 		}
 	}
-	fmt.Println(arr)
+	fmt.Println("Sorted Array:",arr)
 }
 
 // To sort the array using Insertion Sort
@@ -25,7 +25,7 @@ func InsertionSort(arr []int) {
 			j -= 1
 		}
 	}
-	fmt.Println(arr)
+	fmt.Println("Sorted Array:",arr)
 }
 
 // To sort the array using Merge Sort (Recursive Method)
@@ -57,7 +57,7 @@ func MergeSort(arr []int) {
 			j++
 		}
 	}
-	fmt.Println(arr)
+	fmt.Println("Sorted Array:",arr)
 }
 
 // To sort the array using Selection Sort
@@ -74,13 +74,23 @@ func SelectionSort(arr []int) {
 		}
 		arr[i], arr[pos] = arr[pos], arr[i]
 	}
-	fmt.Println(arr)
+	fmt.Println("Sorted Array:",arr)
 }
 
 func main() {
-	arr := []int{2, 5, 4, 1, 7, 8, 4, 6, 9}
-	BubbleSort(arr)
-	InsertionSort(arr)
-	MergeSort(arr)
-	SelectionSort(arr)
+	var N int
+	fmt.Println("Enter the Elements: ")
+	fmt.Scan(&N)
+	
+	arr := make([]int, N)
+	for i:=0; i<N; i++ {
+		fmt.Scan(&arr[i])
+	}
+	fmt.Println("Unsorted Array: ",arr)
+
+	// Uncomment the method you wish to work on
+	// BubbleSort(arr)
+	// InsertionSort(arr)
+	// MergeSort(arr)
+	// SelectionSort(arr)
 }
