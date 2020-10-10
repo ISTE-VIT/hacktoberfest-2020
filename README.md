@@ -34,5 +34,5 @@ All that one must do is contribute to any open source project and send atleast 4
 
 
 <p align="center">
-	With :heart: by <a href="https://istevit.in/" target="_blank">ISTE-VIT</a>
+	With :heart: &nbsp;by <a href="https://istevit.in/" target="_blank">ISTE-VIT</a>
 </p>
