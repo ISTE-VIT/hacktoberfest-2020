@@ -6,6 +6,7 @@
 If you're an algorithms enthusiast :sunglasses: and want to add or improve an algorithm or snippet of code your contribution is welcome! 
 <br>
 
+
 <br>
 <img src="https://github.com/Manasvi070902/project-ideas/blob/master/Hacktober.png">
 
@@ -31,7 +32,20 @@ All that one must do is contribute to any open source project and send atleast 4
 * Send pull request for review.
 
 
+## Contribution Guidelines 
 
+#### Kindly mention the following while making a PR:
+* Mention the problem type along with the subcategory and the programming language.
+  Ex: Data Structures - Trees (C++)
+* If the PR is not in the right format, it will not be merged and marked as invalid.
+* Don't make any changes in the repo format or create new issues without asking the maintainers.
+* You can make a new folder if a particular topic is missing.
+* Kindly avoid repeating the algorithms which are already available.
+
+#### All your PRs will be marked as invalid if you don't adhere to the rules.
+#### Keep contributing!!
+
+ If the information from this repo was useful to you in any way, make sure you give it a star 🌟
 
 <p align="center">
 	With :heart: &nbsp;by <a href="https://istevit.in/" target="_blank">ISTE-VIT</a>
