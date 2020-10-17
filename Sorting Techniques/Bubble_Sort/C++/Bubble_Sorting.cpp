@@ -24,6 +24,7 @@ void bubbleSort(int arr[], int n)
 /* Function to print an array */
 void printArray(int arr[], int size)  
 {  
+	cout<<"\nThe sorted array is: "<<endl;
     int i;  
     for (i = 0; i < size; i++)  
         cout << arr[i] << " ";  
@@ -34,9 +35,10 @@ void printArray(int arr[], int size)
 int main()  
 {  
     int n;
-	cout<<"Enter the number of elements to be stored in array"<<endl; 
+	cout<<"Enter the number of elements to be stored in an array: "<<endl; 
 	cin>>n;
 	int ar[n];
+	cout<<"Enter the elements of the array: "<<endl;
 	for(int i=0;i<n;i++)
 	{
 		cin>>ar[i];
