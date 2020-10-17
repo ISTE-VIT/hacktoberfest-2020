@@ -21,7 +21,7 @@ int main()
     cout<<"Enter number of elements: ";
     cin>>n;
     vector<int> v(n);
-    cout<<"Enter the elements: ";
+    cout<<"Enter the elements: "<<endl;
     for(int i=0;i<n;i++)
         cin>>v[i];
     cout<<"Enter the term to search for: ";
@@ -30,8 +30,8 @@ int main()
     sort(v.begin(),v.end());
     int found=binarySearch(v,term);
     if(found==-1)
-        cout<<"Element not present";
+        cout<<"Element is not present in array.";
     else
-        cout<<"Element present";
+        cout<<"Element "<<term<<" is present.";
     return 0;
 }
