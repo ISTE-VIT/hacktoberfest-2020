@@ -7,7 +7,7 @@ public class JosephusProblem {
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
 		BufferedReader read = new BufferedReader(new InputStreamReader(System.in));
-		String s = read.readLine();
+		String s = read.readLine();	//read number of persion in circle and number of people to be skipped (ex 12 2).
 		String[] str = s.split(" ");
 		int n = Integer.parseInt(str[0]);
 		int k = Integer.parseInt(str[1]);
