@@ -17,6 +17,7 @@ size_t getGCD(size_t a, size_t b) {
 
 // recursion-based GCD
 size_t getGCDRecursively(size_t a, size_t b) {
+    assert(a != 0 || b != 0); // else - gcd is infinity
     return a ? getGCDRecursively(b % a, a) : b;
 }
 
