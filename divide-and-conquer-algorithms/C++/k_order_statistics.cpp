@@ -1,6 +1,7 @@
 // Created by GeorgiyX (github.com/GeorgiyX) 30.10.2020.
 #include <iostream>
 #include <cstring>
+#include <algorithm>
 
 /**
  * Selects the pivot element (this is an element with index 0),
