@@ -34,11 +34,18 @@ size_t partition(int *arr, size_t arrSize) {
  * @return returns the k-th ordinal statistics, or -1 in case of failure.
  */
 int kOrderStatistic(int *arr, size_t arrSize, size_t k) {
-        
+    auto kExpected = partition(arr, arrSize);
+    if (k == kExpected) {
+        return arr[k];
+    } else {
+        return kExpected < k ? kOrderStatistic(arr + kExpected + 1, arrSize - kExpected - 1, k - kExpected - 1)
+                             : kOrderStatistic(arr, kExpected, k);
+    }
 };
 
 int main() {
-    int arr[] = {-1, 8, 7, 1, 6, 8, 15, 2, 6, 10, 16};
+    int arr[] = {-1, 3, 0, 8, 7, 1, 6, 8, 15, 2, 6, 10, 16};
     std::cout << partition(arr, sizeof(arr) / sizeof(arr[0])) << std::endl;
+    std::cout << kOrderStatistic(arr, sizeof(arr) / sizeof(arr[0]), 5) << std::endl;
     return 0;
 }
