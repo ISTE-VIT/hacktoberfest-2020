@@ -18,7 +18,7 @@ size_t partition(int *arr, size_t arrSize) {
         if (arr[i] <= arr[pivot]) {
             /* move an element less than or equal to pivot before pivot */
             tmp = arr[i];
-            memmove(arr + pivot + 1, arr + pivot, i - pivot);
+            memmove(arr + pivot + 1, arr + pivot, (i - pivot) * sizeof(arr[0]));
             arr[pivot] = tmp;
             pivot++;
         }
@@ -43,9 +43,11 @@ int kOrderStatistic(int *arr, size_t arrSize, size_t k) {
     }
 };
 
+
 int main() {
-    int arr[] = {-1, 3, 0, 8, 7, 1, 6, 8, 15, 2, 6, 10, 16};
-    std::cout << partition(arr, sizeof(arr) / sizeof(arr[0])) << std::endl;
-    std::cout << kOrderStatistic(arr, sizeof(arr) / sizeof(arr[0]), 5) << std::endl;
+    int arr[] = {5, 3, 0, 8, 7, 1, 6, 8, 15, 2, 6, 10, 16};
+    std::for_each(arr, arr + (sizeof(arr) / sizeof(arr[0])), [](auto el) { std::cout << el << " "; });
+    std::cout << std::endl << "kOrderStatistic(4): " << kOrderStatistic(arr, sizeof(arr) / sizeof(arr[0]), 4)
+              << std::endl;
     return 0;
 }
