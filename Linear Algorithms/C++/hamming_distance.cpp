@@ -1,3 +1,4 @@
+// Created by GeorgiyX (github.com/GeorgiyX) 31.10.2020.
 #include <iostream>
 
 /**
