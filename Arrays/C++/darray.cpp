@@ -2,7 +2,7 @@
 #include <cassert>
 
 /**
- * Dynamic array data structure, like std:: vector.
+ * Dynamic array data structure, like std::vector.
  * @tparam T type of darray elements
  */
 template<class T>
@@ -65,6 +65,12 @@ private:
 
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    DArray<int> arr(0, 1);
+    assert(arr.getSize() == 1 && "now size == 1");
+    arr.pushBack(10);
+    arr.pushBack(20);
+    assert(arr.getSize() == 3 && "now size == 3");
+    assert(arr[0] == 0 && arr[2] == 20);
+    assert(arr.getLast() == 20);
     return 0;
 }
