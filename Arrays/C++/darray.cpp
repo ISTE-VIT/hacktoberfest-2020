@@ -16,35 +16,45 @@ public:
     };
 
     T &operator[](size_t index) {
-
+        assert(index <= _nextIndex && "Wrong index");
+        return _buffer[index];
     }
 
     size_t pushBack(T element) {
-
+        if (isFull()) { resize(); }
+        _buffer[_nextIndex] = element;
+        return _nextIndex++;
     }
 
     size_t getSize() {
-
+        return _nextIndex;
     }
 
     T &getLast() {
-
+        assert(_nextIndex != 0 && "DArray in empty!");
+        return _buffer[_nextIndex - 1];
     }
 
-
     size_t deleteLast() {
-
+        assert(_nextIndex != 0 && "DArray in empty!");
+        return (--_nextIndex - 1);
     }
 
     ~DArray() {
-
+        delete[] _buffer;
     }
 
 private:
-
+    bool isFull() {
+        return _nextIndex == _bufferSize;
+    }
 
     void resize() {
-
+        auto oldBuffer = _buffer;
+        _buffer = new T[_bufferSize * 2];
+        memmove(_buffer, oldBuffer, _bufferSize * sizeof(T));
+        _bufferSize *= 2;
+        delete[] oldBuffer;
     }
 
     size_t _bufferSize;
