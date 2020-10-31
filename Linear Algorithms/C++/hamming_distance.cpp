@@ -8,15 +8,20 @@
  * @param size - size of the smallest buffer
  * @return distance
  */
-size_t hammingDistance(char *left, char *right, size_t size) {
+size_t hammingDistance(const char *left, const char *right, size_t size) {
     size_t hammingDistance = 0;
-    for (size_t i = 0; i < size; ++i) {
-
+    for (size_t i = 0; i < size; ++i) { // for byte in message
+        for (size_t j = 0; j < 8; ++j) { // for bits in byte
+            if(((left[i] >> j) & 1) != ((right[i] >> j) & 1))
+                hammingDistance++;
+        }
     }
-    return 0;
+    return hammingDistance;
 }
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    char left[] = {1, 2, 0};
+    char right[] = {5, 2, 0};
+    std::cout << hammingDistance(left, right, std::min(sizeof(left), sizeof(right))) << std::endl;
     return 0;
 }
